@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Configuration {
-    static final String clientConfigPath = System.getProperty("user.home") + File.separator + "client-435.conf.yaml";
+    static final String clientConfigPath = System.getProperty("user.home") + File.separator + "peltorune.conf.yaml";
 
 
     public static void read() {
@@ -124,12 +124,12 @@ public class Configuration {
     /**
      * IP Address or Hostname of the server to establish a connection.
      */
-    public static String SERVER_ADDRESS = "127.0.0.1";
+    public static String SERVER_ADDRESS = "rune.peltonet.com";
 
     /**
      * Name of the cache folder located in the users home directory.
      */
-    public static String CACHE_NAME = ".filestore_435";
+    public static String CACHE_NAME = ".peltorune";
 
     /**
      * Port for establishing a connection to the game server.
@@ -175,14 +175,13 @@ public class Configuration {
     /**
      * Use static username/password pair.
      */
-    public static boolean USE_STATIC_DETAILS = true;
+    public static boolean USE_STATIC_DETAILS = false;
 
     /**
      * Static username and password
      */
-
-    public static String USERNAME = "a";
-    public static String PASSWORD = "aaaaa";
+    public static String USERNAME = "testi";
+    public static String PASSWORD = "testi";
 
     /**
      * Do you want to render roofs
@@ -204,7 +203,7 @@ public class Configuration {
     /**
      * Enable resizable mode
      */
-    public static boolean RESIZABLE = false;
+    public static boolean RESIZABLE = true;
 
     /**
      * Toggle rendering frames to reduce wasted processing power on the login
@@ -220,7 +219,7 @@ public class Configuration {
     /**
      * The display name of the game server to use within the client
      */
-    public static String SERVER_DISPLAY_NAME = "Build 435";
+    public static String SERVER_DISPLAY_NAME = "PeltoRune";
 
     /**
      * When hovering over widgets, show useful information
@@ -230,7 +229,7 @@ public class Configuration {
     /**
      * Should music be muted, overridden when logged in
      */
-    private static boolean SOUND_MUTED = true;
+    private static boolean SOUND_MUTED = false;
 
     public static boolean isSoundMuted() {
         return SOUND_MUTED;
@@ -255,8 +254,6 @@ public class Configuration {
         } catch (Exception e) {
             System.out.println("Could not write client config.");
         }
-
-
     }
 
     public static RSString getUsername() {

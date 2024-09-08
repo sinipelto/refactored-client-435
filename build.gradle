@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'tech.henning'
-version = '0.3'
+version = '1.0'
 
 sourceCompatibility = 8
 targetCompatibility = 8
@@ -21,7 +21,7 @@ jar {
     dependsOn configurations.runtimeClasspath
 
     manifest {
-        attributes("MAIN-CLASS": application.mainClassName)
+        attributes("MAIN-CLASS": "org.runejs.client.GameShell")
     }
 
     from {
